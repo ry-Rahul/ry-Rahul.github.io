@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.outer-box {
+    /* border: 2px solid red; */
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    /* background-color: skyblue; */
+    background: linear-gradient(to top left, rgb(48, 175, 230), skyblue);
+}
+
+.inner-box {
+    /* border: 2px solid rgb(51, 0, 254); */
+    width: 350px;
+    /* height: 350px; */
+    margin: 0px auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 20px 40px;
+    /* background-color: #ffffff09; */
+    background: linear-gradient(to top left, #ffffff, #ffffff33);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(6, 118, 167);
+    /* box shadow 2px right 2px bottom 5px ka blur and color */
+    z-index: 2;
+}
+.signup-header h1 {
+    font-size: 2.5rem;
+    color: #212121;
+}
+.signup-header p {
+    font-size: 0.9rem;
+    color: #8f8f8f;
+    border: 2px soild yellowgreen;
+}
+
+.signup-body {
+    /* border: 2px solid rgb(4, 255, 0); */
+    margin: 13px 0px;
+}
+
+.signup-body p {
+    margin: 10px 0px;
+}
+
+.signup-body p label {
+    display: block;
+    font-weight: bold;
+}
+
+.signup-body p input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(137, 137, 137);
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+.signup-body p input[type="submit"] {
+    background-color: rgb(48, 175, 230);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.signup-body p input[type="submit"]:hover {
+    background-color: rgb(17, 134, 185);
+}
+
+.signup-footer p {
+    display: block;
+    color: #8f8f8f;
+    text-align: center;
+}
+.signup-footer p a {
+    text-decoration: none;
+    color: rgb(17, 134, 185);
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    background: linear-gradient(to top right, #ffffff33, #ffffff);
+    position: absolute;
+}
+
+.c1 {
+    top: 100px;
+    left: 45px;
+}
+.c2 {
+    bottom: 100px;
+    right: 55px;
+}
