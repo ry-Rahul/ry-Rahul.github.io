@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Lato:wght@400;700&family=Libre+Bodoni:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.hero{
+    background: #1d2026;
+    /* background:black; */
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    border: 2px solid red;
+
+}
+
+nav{
+    border: 2px solid rgb(0, 174, 255);
+    display:flex;
+    align-items: center;
+    padding: 20px 8%;
+
+}
+.menu-img{
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    text-align: right;
+    flex:1;
+
+}
+
+li{
+   display: inline-block;
+   list-style-type:none;
+   margin:0 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button{
+    background: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+button span{
+    display: block;
+    background-color: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+.lamp-container{
+    border: 2px solid green;
+    position: absolute;
+    top:-20px;
+    left:22%;
+    width: 200px;
+
+}
+.lamp{
+    width:180px;
+}
+.light{
+    position: absolute;
+    top: 97%;
+    left:41%;
+    transform: translatex(-50%);
+    width: 700px;
+}
