@@ -22,16 +22,49 @@
                 <li class="lis "><a href="#">Contemporary</a></li>
                 <li class="lis"><a href="#">Affordable</a></li>
             </ul>
-            <button type="button"><span></span></button>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
         </nav>
 
         <!-- ___________lamp_____________________- -->
         <div class="lamp-container">
-              <img src="images/lamp.png" alt="lampimage" class="lamp">
-              <img src="images/light.png" alt="lightimage" class="light">
+            <img src="images/lamp.png" alt="lampimage" class="lamp">
+            <img src="images/light.png" alt="lightimage" class="light" id="lightt">
+        </div>
+
+        <!-- text contaienr _____________________________-->
+        <div class="text-container">
+            <h1>
+                Latest <br> in lighting
+            </h1>
+            <p>
+                This is the first lamp from our company. we're making a huge collection of modrn Lamps in all categories
+                from home use to office use.
+            </p>
+            <a href="#">Check All Collection</a>
+
+            <div class="control">
+                <p>04</p>
+                <div class="line"><span>
+
+                    </span></div>
+                <p>05</p>
+            </div>
         </div>
     </div>
 
+
+
+    <script>
+
+        var btn = document.getElementById("btn");
+        var lightt = document.getElementById("lightt");
+
+        function toggleBtn() {
+            btn.classList.toggle("active");
+            lightt.classList.toggle("on");
+
+        }
+    </script>
 </body>
 
 </html>
