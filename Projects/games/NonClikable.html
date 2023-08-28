@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-      .container {
-        width: 100%;
-        height: 100vh;
-        text-align: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
 
-        background: linear-gradient(to bottom right, #08001f, #30197d);
-      }
+        .container {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
 
-      h1 {
-        padding-top: 10px;
-        font-size: 64px;
-        color: #fff;
-        text-shadow: 0 0 10px #fff;
-      }
+            background: linear-gradient(to bottom right, #08001f, #30197d);
+        }
 
-      .btn{
+        h1 {
+            padding-top: 10px;
+            font-size: 64px;
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
+        }
 
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 20px;
-        cursor: pointer;
-        background: #fff;
-        color: #000;
-        margin: 10px;
-        box-shadow: 0 0 10px #fff;
-      }
+        .btn {
 
-      .alert{
-        
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            background: #fff;
+            color: #000;
+            margin: 10px;
+            box-shadow: 0 0 10px #fff;
+        }
 
-        font-size: 32px;
-        color: #fff;
-        text-shadow: 0 0 6px #fff;
-        margin: auto;
-        position: absolute;
-        bottom: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: none;
-      }
+        .alert {
+
+
+            font-size: 32px;
+            color: #fff;
+            text-shadow: 0 0 6px #fff;
+            margin: auto;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <div class="smallcontainer">
-        <h1>content 1</h1>
-        <button class="btn" id="yes">Yes</button>
-        <button class="btn" id="no">No</button>
-        <div class="alert" id="message">
-          <h2>content 2</h2>
+        <div class="smallcontainer">
+            <h1>Khane chalogi ?</h1>
+            <button class="btn" id="yes">Yes</button>
+            <button class="btn" id="no">No</button>
+            <div class="alert" id="message">
+                <h2>Thik hai chlate hai 😜</h2>
+            </div>
         </div>
-      </div>
     </div>
 
     <script>
@@ -71,17 +74,17 @@
         let no = document.getElementById("no");
         let message = document.getElementById("message");
         let flag = false;
-    
+
         yes.addEventListener("click", function () {
             message.style.display = "block";
             flag = true;
         });
-    
-        no.addEventListener("mouseover", ()=> {
+
+        no.addEventListener("mouseover", () => {
             no.style.position = "absolute";
             no.style.top = Math.random() * 64 + "vh";
             no.style.left = Math.random() * 64 + "vw";
-            if(flag){
+            if (flag) {
                 message.style.display = "none";
             }
         });
@@ -91,5 +94,6 @@
         });
 
     </script>
-  </body>
+</body>
+
 </html>
