@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto Mono', monospace;
+        text-shadow: 0 0 10px #12ff0e;
+        color: #12ff0e;
+
+    }
+
+    .header {
+        height: 100px;
+        background-color: orange;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: green;
+        display: flex;
+
+        align-items: center;
+        position: relative;
+        justify-content: space-around;
+    }
+
+    .innerContainer {
+        display: flex;
+        height: 90vh;
+        width: 100vw;
+        justify-content: space-evenly;
+        padding: 0 24px;
+        gap: 24px;
+    }
+
+    .box {
+        height: 100%;
+        width: 100px;
+        flex: 1;
+        border-radius: 24px;
+    }
+
+    .left {
+        background-color: rgba(0, 0, 0, 0.7);
+        flex: 1;
+        box-shadow: 0 0 10px #12ff0e;
+    }
+
+    .right {
+        background-color: rgba(0, 0, 0, 0.7);
+        flex: 1;
+        box-shadow: 0 0 10px #12ff0e;
+    }
+
+    .mid {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: #497148 2px solid;
+        flex: 2;
+    }
+
+    .heading {
+        color: white;
+        text-align: center;
+        margin: 10px;
+        font-size: 40px;
+    }
+
+    .mid input {
+        width: 80%;
+        height: 10px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .cont input {
+        background: black;
+        color: red;
+        text-shadow: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    #hacked_dis {
+        font-size: 18px;
+    }
+
+    .check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .check input {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        background-color: #497148;
+    }
+
+    .cont p {
+        font-size: 18px;
+    }
+
+    #fetch_Name {
+        background: black;
+        color: red;
+        text-shadow: none;
+        border: 1px solid #12ff0e;
+        padding: 18px 12px;
+        border-radius: 12px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .bit {
+        display: flex;
+        height: 80%;
+        margin: 32px auto;
+        max-width: 200px;
+        word-wrap: break-word;
+        overflow: hidden;
+        padding: 4px;
+    }
+
+    .box_title {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    /* media query for mobile */
+    @media (max-width: 768px) {
+        body {
+            overflow-x: hidden;
+            background-color: black;
+        }
+
+        .container {
+            flex-direction: column;
+            background: none;
+        }
+
+        .innerContainer {
+            flex-direction: column;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+        .bit {
+            max-width: 100%;
+            margin: 12px auto;
+            margin-bottom: 0;
+            padding: 12px;
+        }
+
+        .left {
+            max-height: 40vh;
+        }
+
+        .right {
+            margin-top: 24px;
+            display: none;
+        }
+
+        .mid {
+            margin-bottom: 24px;
+            height: 100%;
+        }
+
+        #hacked_dis {
+            font-size: 16px;
+            margin-bottom: 8px;
+            margin-left: 8px;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- header -->
+    <!-- <div class="header"></div> -->
+
+    <div class="container">
+        <div class="innerContainer">
+
+            <div class="box left">
+                <h4 class="box_title">Hacking</h4>
+                <div class="bit" id="bits1"></div>
+            </div>
+
+            <!-- ____middle box_____ -->
+            <div class="box mid">
+                <h2 class="heading">Hacker Man</h2>
+
+                <div class="cont">
+
+                    <p>Specify target:</p>
+                    <input id="fetch_Name" type="text">
+
+                    <!-- check box -->
+                    <div class="check">
+                        <label>Facebook</label>
+                        <input type="checkbox" checked="checked">
+
+                        <label>Instagram</label>
+                        <input type="checkbox">
+
+                        <label>Phone</label>
+                        <input type="checkbox">
+                    </div>
+                    <br>
+                    <p id="hacked_dis">
+                    </p>
+                </div>
+
+            </div>
+            <!-- right box -->
+            <div class="box right">
+                <h4 class="box_title">Hacking</h4>
+                <div class="bit" id="bits2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let name = document.getElementById("fetch_Name");
+        let bits = document.getElementsByClassName("bits");
+
+
+        name.addEventListener("keyup", function (e) {
+            if (e.which == 13) {
+                //console.log(e.target.value);
+
+                // run infinite text loop in bits div
+                let leftCtn = document.getElementById("bits1");
+                let rightCtn = document.getElementById("bits2");
+
+                // infinite loop of text 0 and 1
+
+                setInterval(() => {
+                    // generate random number string of 0 and 1 of length 100
+                    let str = "";
+
+                    for (let i = 0; i < 500; i++) {
+                        str += Math.round(Math.random());
+                    }
+
+                    // after every one word add space
+                    str = str.split("").join(" ");
+
+                    leftCtn.innerHTML = str;
+
+                    // reverse the string
+                    let b = str.split("").reverse().join("");
+                    rightCtn.innerHTML = b;
+
+                }, 100);
+
+
+
+                let a = ["Initializing Hack tool...",
+                    "Connecting to Facebook...",
+                    "Connecting to server 1...",
+                    "Connection failed. Retrying...",
+                    "Connecting to server 2...",
+                    "Connected Successfully...",
+                    "Username Fetching Failed...",
+                    "Trying Brute Force...",
+                    "200K passwords tried...",
+                    "Match not found...",
+                    "Another 200K passwords tried...",
+                    "Match found...",
+                    "Accessing account...",
+                    `${e.target.value} Account hacked successfully...`,
+                ];
+
+
+
+                const sleep = async (seconds) => {
+                    return new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            resolve(true);
+                        }, seconds * 1000);
+                    });
+                };
+
+
+
+                const showHack = async (message) => {
+                    await sleep(2);
+                    hacked_dis.innerHTML += message + "<br>";
+                }
+
+                (async () => {
+                    for (let i = 0; i < a.length; i++) {
+                        await showHack(a[i]);
+                    }
+                })();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
+
